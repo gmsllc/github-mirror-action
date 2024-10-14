@@ -1,4 +1,4 @@
-name: 'Mirror to GitHub'
+name: 'Github branches mirrorring'
 branding:
   icon: 'download-cloud'
   color: 'white'
@@ -10,6 +10,14 @@ inputs:
   GITHUB_TOKEN:
     description: 'set this to the value of secrets.GITHUB_TOKEN'
     required: true
+  origin-branch:
+    description: 'Origin Branch to mirror'
+    required: false
+    default: ''
+  destination-branch:
+    description: 'Destination Branch'
+    required: false
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
