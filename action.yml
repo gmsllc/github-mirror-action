@@ -23,5 +23,7 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.origin }}
+    - ${{ inputs.origin-branch }}
+    - ${{ inputs.destination-branch }}
   env:
     GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
